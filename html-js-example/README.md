@@ -2,7 +2,7 @@
 
 HTML/JavaScript integration example demonstrating SkinAI v3 plugin integration with event monitoring, SDK actions, and product interactions.
 
-> **📚 SDK Documentation**: For complete event documentation, type definitions, and integration guides, see the [main README](../README.md).
+> **SDK Documentation**: For complete event documentation, type definitions, and integration guides, see the [main README](../README.md).
 
 ## Features
 
@@ -10,8 +10,6 @@ HTML/JavaScript integration example demonstrating SkinAI v3 plugin integration w
 - **Event logging**: Real-time monitoring of 17 SDK events
 - **Collapsible event panel**: Toggle sidebar to maximize viewing area
 - **SDK action controls**: Camera permissions, product interactions
-- **Clean, declarative code**: Organized with constants, state management, and single-responsibility functions
-- **Hot module replacement**: Powered by Vite for instant updates
 - **Product integration**: AddToCart, ProductVisit, ProductTryClick event handlers
 
 ## Quick Start
@@ -55,27 +53,6 @@ For complete event documentation with payloads and usage examples, see:
 - **Events Tab**: Real-time event logging with timestamps and payload details
 - **Collapsible sidebar**: Click the arrow button to toggle the events panel
 
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Format code
-npm run format
-
-# Lint code
-npm run lint
-```
 
 ## Integration Notes
 
