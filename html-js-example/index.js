@@ -204,6 +204,20 @@ function subscribeToEvents() {
 // ============================================
 
 
+function switchTab(tabName) {
+  const tabButtons = document.querySelectorAll('.tab-button')
+  const tabContents = document.querySelectorAll('.tab-content')
+
+  tabButtons.forEach(button => button.classList.remove('active'))
+  tabContents.forEach(content => content.classList.remove('active'))
+
+  const activeButton = document.querySelector(`.tab-button[onclick="switchTab('${tabName}')"]`)
+  const activeContent = document.getElementById(`${tabName}-tab`)
+
+  if (activeButton) activeButton.classList.add('active')
+  if (activeContent) activeContent.classList.add('active')
+}
+
 function toggleSidebar() {
   if (!dom.eventsPanel || !dom.contentGrid) return
 
