@@ -7,12 +7,14 @@ Official integration examples for the PulpoAR SkinAI v3 plugin, demonstrating ho
 ### [HTML/JavaScript Example](./html-js-example)
 Web-based integration using vanilla JavaScript and WebView.
 
-**Best for**: Web applications, Electron apps, or understanding the core SDK integration
-
 ### [Kotlin/Android Example](./kotlin-skinai-example)
 Native Android integration using Kotlin and WebView.
 
-**Best for**: Native Android applications, mobile apps
+### [React Native Example](./react-native-skinai-example)
+Cross-platform mobile integration using React Native and WebView with TypeScript support.
+
+### [Swift/iOS Example](./swift-skinai-example)
+Native iOS integration using Swift and WKWebView.
 
 ## Quick Links
 
