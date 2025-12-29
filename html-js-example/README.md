@@ -6,9 +6,7 @@ HTML/JavaScript integration example demonstrating SkinAI v3 plugin integration w
 
 - **Full SkinAI v3 integration**: Complete skin analysis experience
 - **Event logging**: Real-time monitoring of 18+ SDK events
-- **SDK action controls**: Navigation, camera permissions, product interactions
-- **Clean, declarative code**: Organized with constants, state management, and single-responsibility functions
-- **Hot module replacement**: Powered by Vite for instant updates
+- **SDK action controls**: Camera permissions
 - **Product integration**: AddToCart, ProductVisit, ProductTryClick event handlers
 
 ## Quick Start
@@ -35,7 +33,97 @@ skinai-html-js-example/
 
 ## SDK Integration Reference
 
-### Events (18 total)
+### Type Definitions
+
+Below are the TypeScript-style interface definitions for objects used in event payloads. These types are based on the official `@pulpoar/plugin-sdk` source code and are provided for reference when working with the JavaScript SDK.
+
+#### ProductWithoutRoutines
+Product object without nested routine data. This is the type returned in SDK events.
+```javascript
+{
+  id: string,
+  name: string | null,
+  brand: string,              // Brand ID or name
+  category: string,            // Category ID
+  customSlug: string,
+  price: number,
+  problems: Array<{
+    issue: string,
+    name: string
+  }>,
+  aiSimulator?: Array<{       // Optional AI simulator configuration
+    name: string,
+    levels: Array<{
+      name: string,
+      image: string,
+      masks: Array<{
+        name: string,
+        opacity: number,
+        smooth: number
+      }>
+    }>
+  }>
+  // Additional product fields from your configuration
+}
+```
+
+#### RoutineWithoutProducts
+Routine object without nested product data. This is the type returned in SDK events.
+```javascript
+{
+  id: string,
+  name: string | null,
+  slug: string | null,
+  stepName: string | null,
+  sort: number | null,
+  date_created: string | null,
+  date_updated: string | null
+  // Additional routine fields from your configuration
+}
+```
+
+#### SkinaiQuestion
+Question object structure used in questionnaire events.
+```javascript
+{
+  id: string,
+  header: string,
+  description: string,
+  answers: SkinaiApiAnswer[],
+  hasAnswerImage: boolean,
+  hasAnswerDescription: boolean,
+  selectionType: "single" | "multiple",
+  position: { x: number, y: number },
+  image?: string,
+  initial: boolean,
+  sort: number
+}
+```
+
+#### SkinaiApiAnswer
+Answer object for questionnaire responses.
+```javascript
+{
+  id: string,
+  header?: string,
+  description?: string,
+  image?: string,
+  position: { x: number, y: number },
+  target?: string
+}
+```
+
+#### SkinIssue
+Skin issue/problem detected in analysis.
+```javascript
+{
+  id: string,
+  name: string,
+  score: number  // Score value (typically 0-100)
+}
+```
+
+### Events (17 total)
 
 All events are logged on the demo page with timestamps and payloads.
 
@@ -76,7 +164,7 @@ All events are logged on the demo page with timestamps and payloads.
   {
     skinHealthScore: number,
     isSelfie: boolean,
-    issues: Array<{ id: string, name: string, score: number }>
+    issues: SkinIssue[]
   }
   ```
 
@@ -160,28 +248,6 @@ All events are logged on the demo page with timestamps and payloads.
 
 **Right Panel: Events**
 - **Events Tab**: Real-time event logging with timestamps and payload details
-
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Format code
-npm run format
-
-# Lint code
-npm run lint
-```
 
 ## Integration Notes
 
