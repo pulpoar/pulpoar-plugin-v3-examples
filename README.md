@@ -26,7 +26,7 @@ Native iOS integration using Swift and WKWebView.
 
 ## Type Definitions
 
-Below are the TypeScript-style interface definitions for objects used in event payloads. These types are based on the official `@pulpoar/plugin-sdk` source code.
+Below are the TypeScript-style interface definitions for objects used in event payloads.
 
 ### ProductWithoutRoutines
 Product object without nested routine data. This is the type returned in SDK events.
