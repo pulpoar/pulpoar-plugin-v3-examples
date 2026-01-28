@@ -6,9 +6,10 @@ HTML/JavaScript integration example demonstrating SkinAI v3 plugin integration w
 
 ## Features
 
+- **Two integration types**: Embed and Modal
+- **Drawer system**: Centralized events and guide drawers
 - **Full SkinAI v3 integration**: Complete skin analysis experience
 - **Event logging**: Real-time monitoring of 17 SDK events
-- **Collapsible event panel**: Toggle sidebar to maximize viewing area
 - **SDK action controls**: Camera permissions, product interactions
 - **Product integration**: AddToCart, ProductVisit, ProductTryClick event handlers
 
@@ -25,13 +26,18 @@ Vite will start at `http://localhost:3000` and automatically open the demo page.
 
 ```
 skinai-html-js-example/
-├── index.html         # Main demo page with full event logging
-├── index.js           # SDK integration and event handlers
-├── common.css         # Shared base styles and navigation
-├── index.css          # Page-specific styles (same as makeup example)
-├── vite.config.js     # Vite configuration
-├── package.json       # Dependencies
-└── README.md          # This file
+├── index.html              # Main menu page
+├── skinai-embed.html       # Embed integration
+├── skinai-modal.html       # Modal integration
+├── drawer-core.js          # Drawer system functions
+├── drawer-loader.js        # Dynamic drawer HTML loader
+├── drawer-styles.css       # Drawer system styles
+├── drawer-events-skinai.html # Events drawer
+├── drawer-guide-skinai.html  # Integration guide drawer
+├── skinai-events.js        # SDK event subscriptions
+├── vite.config.js          # Vite configuration
+├── package.json            # Dependencies
+└── README.md               # This file
 ```
 
 ## SDK Integration Reference
