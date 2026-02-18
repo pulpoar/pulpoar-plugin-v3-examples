@@ -17,6 +17,9 @@ function App(): React.JSX.Element {
         onOnboardingCarouselChange={payload =>
           console.log('[SkinAI] Onboarding carousel changed:', payload)
         }
+        onQuestionAnswer={payload =>
+          console.log('[SkinAI] Question answered:', payload)
+        }
         onQuestionnaireComplete={payload =>
           console.log('[SkinAI] Questionnaire completed:', payload)
         }

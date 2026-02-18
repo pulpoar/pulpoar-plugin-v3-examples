@@ -8,6 +8,8 @@ const onPathChange = (_payload: any): void => undefined;
 
 const onOnboardingCarouselChange = (_payload: any): void => undefined;
 
+const onQuestionAnswer = (_payload: any): void => undefined;
+
 const onQuestionnaireComplete = (_payload: any): void => undefined;
 
 const onPhotoUse = (_payload: undefined): void => undefined;
@@ -43,6 +45,7 @@ export const sdk = {
     onError,
     onPathChange,
     onOnboardingCarouselChange,
+    onQuestionAnswer,
     onQuestionnaireComplete,
     onPhotoUse,
     onPhotoRetake,

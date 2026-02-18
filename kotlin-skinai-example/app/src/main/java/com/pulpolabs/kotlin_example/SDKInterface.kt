@@ -29,6 +29,11 @@ public class SDKInterface {
     }
 
     @JavascriptInterface
+    fun onQuestionAnswer(payload: String) {
+        Log.d("PulpoAR SkinAI", "Question answered: $payload")
+    }
+
+    @JavascriptInterface
     fun onQuestionnaireComplete(payload: String) {
         Log.d("PulpoAR SkinAI", "Questionnaire completed: $payload")
     }

@@ -25,6 +25,9 @@ struct ContentView: View {
                     onOnboardingCarouselChange: { data in
                         print("[SkinAI] onOnboardingCarouselChange:", data)
                     },
+                    onQuestionAnswer: { data in
+                        print("[SkinAI] onQuestionAnswer:", data)
+                    },
                     onQuestionnaireComplete: { data in
                         print("[SkinAI] onQuestionnaireComplete:", data)
                     },
