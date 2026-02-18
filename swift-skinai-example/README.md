@@ -94,6 +94,7 @@ PulpoARViewRepresentable(
             onError: { error in print("[SkinAI] onError:", error) },
             onPathChange: { data in print("[SkinAI] onPathChange:", data) },
             onOnboardingCarouselChange: { data in ... },
+            onQuestionAnswer: { data in ... },
             onQuestionnaireComplete: { data in ... },
             onPhotoUse: { data in ... },
             onPhotoRetake: { data in ... },

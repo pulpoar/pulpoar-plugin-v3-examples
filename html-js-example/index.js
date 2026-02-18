@@ -165,6 +165,7 @@ function subscribeToEvents() {
   pulpoar.onOnboardingCarouselChange(data => logEvent('onOnboardingCarouselChange', data))
 
   // Questionnaire events
+  pulpoar.onQuestionAnswer(data => logEvent('onQuestionAnswer', data))
   pulpoar.onQuestionnaireComplete(data => logEvent('onQuestionnaireComplete', data))
 
   // Photo events

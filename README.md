@@ -19,7 +19,7 @@ Native iOS integration using Swift and WKWebView.
 ## Quick Links
 
 - [Type Definitions](#type-definitions)
-- [SDK Events](#sdk-events-17-total)
+- [SDK Events](#sdk-events-18-total)
 - [Integration Guide](#integration-guide)
 
 ---
@@ -121,7 +121,7 @@ Skin issue/problem detected in analysis.
 
 ---
 
-## SDK Events (17 total)
+## SDK Events (18 total)
 
 All events are available through the `pulpoar` SDK object. Subscribe to events before the SDK initializes.
 
@@ -192,6 +192,27 @@ pulpoar.onOnboardingCarouselChange(data => {
 ---
 
 ### Questionnaire
+
+#### `onQuestionAnswer`
+User answered an individual question in the questionnaire.
+
+**Payload:**
+```javascript
+{
+  question: SkinaiQuestion,
+  answers: SkinaiApiAnswer[]
+}
+```
+
+**Usage:**
+```javascript
+pulpoar.onQuestionAnswer(data => {
+  console.log('Question answered:', data.question.header)
+  console.log('Selected answers:', data.answers)
+})
+```
+
+---
 
 #### `onQuestionnaireComplete`
 User completed the skin questionnaire.

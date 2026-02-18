@@ -38,6 +38,10 @@ class PulpoARSDK {
         return sdkEventBuilder("onOnboardingCarouselChange")
     }
 
+    static func onQuestionAnswer() -> String {
+        return sdkEventBuilder("onQuestionAnswer")
+    }
+
     static func onQuestionnaireComplete() -> String {
         return sdkEventBuilder("onQuestionnaireComplete")
     }

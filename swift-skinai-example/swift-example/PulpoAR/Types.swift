@@ -305,6 +305,7 @@ struct Events {
     let onError: ((Any) -> Void)?
     let onPathChange: ((Any) -> Void)?
     let onOnboardingCarouselChange: ((Any) -> Void)?
+    let onQuestionAnswer: ((Any) -> Void)?
     let onQuestionnaireComplete: ((Any) -> Void)?
     let onPhotoUse: ((Any) -> Void)?
     let onPhotoRetake: ((Any) -> Void)?
@@ -325,6 +326,7 @@ struct Events {
         onError: ((Any) -> Void)? = nil,
         onPathChange: ((Any) -> Void)? = nil,
         onOnboardingCarouselChange: ((Any) -> Void)? = nil,
+        onQuestionAnswer: ((Any) -> Void)? = nil,
         onQuestionnaireComplete: ((Any) -> Void)? = nil,
         onPhotoUse: ((Any) -> Void)? = nil,
         onPhotoRetake: ((Any) -> Void)? = nil,
@@ -344,6 +346,7 @@ struct Events {
         self.onError = onError
         self.onPathChange = onPathChange
         self.onOnboardingCarouselChange = onOnboardingCarouselChange
+        self.onQuestionAnswer = onQuestionAnswer
         self.onQuestionnaireComplete = onQuestionnaireComplete
         self.onPhotoUse = onPhotoUse
         self.onPhotoRetake = onPhotoRetake

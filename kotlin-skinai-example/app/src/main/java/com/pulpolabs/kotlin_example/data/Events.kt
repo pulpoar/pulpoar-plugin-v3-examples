@@ -5,6 +5,7 @@ enum class Events {
     onError,
     onPathChange,
     onOnboardingCarouselChange,
+    onQuestionAnswer,
     onQuestionnaireComplete,
     onPhotoUse,
     onPhotoRetake,

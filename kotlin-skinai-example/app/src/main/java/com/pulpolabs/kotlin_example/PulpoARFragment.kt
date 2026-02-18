@@ -119,6 +119,7 @@ class PulpoARFragment : Fragment() {
                             Events.onError,
                             Events.onPathChange,
                             Events.onOnboardingCarouselChange,
+                            Events.onQuestionAnswer,
                             Events.onQuestionnaireComplete,
                             Events.onPhotoUse,
                             Events.onPhotoRetake,
